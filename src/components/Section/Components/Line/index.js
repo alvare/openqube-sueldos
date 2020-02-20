@@ -45,10 +45,10 @@ class Line extends Component {
 
     return (
       <LineChart width={620} height={400} data={data}
-        margin={{ top: 10, right: 0, left: 5, bottom: 10 }}
+        margin={{ top: 10, right: 20, left: 12, bottom: 10 }}
         className='line-chart'>
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey={xDataKey} />
+        <XAxis dataKey={xDataKey} interval={0} />
         <YAxis tickFormatter={isPercentual ? this.toPercent : this.toNumber.bind(this)} />
         <Tooltip content={<CustomizedTooltip />} formatter={isPercentual ? this.toPercent : this.toNumber.bind(this)} />
         {!yDataKeys.includes('value') ? <Legend /> : null}

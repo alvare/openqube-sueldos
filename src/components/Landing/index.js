@@ -19,6 +19,10 @@ class Landing extends Component {
       <Container>
         <SideNav />
         <div className='right-wrapper'>
+          <div className='red-alert'>
+            ¡Atención! <br/> Esta encuesta se encuentra modificada para uso personal,
+            enfocandose solo en la data para la Ciudad Autónoma de Buenos Aires.
+          </div>
           {data.map((category, categoryIndex) => (
             <section
               id={slugify(category.title)}
@@ -48,7 +52,6 @@ class Landing extends Component {
             </section>
           ))
           }
-          
           <hr />
           <License />
           <br />
